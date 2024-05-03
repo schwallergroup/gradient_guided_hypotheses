@@ -1,0 +1,30 @@
+{   
+    "partial_perc": {
+        "value": 0.04,
+        "description": "Ratio of complete data for columns with simulated missing data."
+    },
+    "hidden_size": {
+        "value": 32,
+        "description": "Size of hidden layer in MLP model used to train on hypothesis and get gradients."
+    },
+    "batch_size": {
+        "value": 100,
+        "description": "Batch size for training per datapoint before data augmentation with hypothesis."
+    },
+    "epochs": {
+        "value": 12,
+        "description": "Number of epochs for the GGH model, other models will use 2.5x the number of epochs (tend to take longer to converge). Models are saved and best performing ones in validation are selected for final test."
+    },
+    "lr": {
+        "value": 0.004,
+        "description": "Learning rate for model training."
+    },
+    "dropout": {
+        "value": 0.05,
+        "description": "Dropout for model training."
+    },
+    "nu": {
+        "value": 0.1,
+        "description": "Parameter which influences scope-size of gradient selection one class SVM."
+    }
+}

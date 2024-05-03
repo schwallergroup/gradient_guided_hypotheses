@@ -1,0 +1,26 @@
+{
+    "data_path": {
+        "value": "data/airfoil_self_noise/data_missing.csv",
+        "description": "Path to .csv file with data to use in benchmark."
+    },
+    "results_path": {
+        "value": "saved_results/Airfoil Noise",
+        "description": "Path to folder where output files and models of the benchmark will be saved."
+    },
+    "inpt_vars": {
+        "value": ["frequency", "attack-angle", "free-stream-velocity", "suction-side-displacement-thickness"],
+        "description": "Names of columns in .csv to be used as training features."
+    }, 
+    "target_vars": {
+        "value": ["scaled-sound-pressure"],
+        "description": "Names of columns in .csv to be used as prediction targets."
+    },
+    "miss_vars": {
+        "value": ["chord-length"],
+        "description": "Names of columns in .csv with missing data or where missing data will be simulated for benchmarking purposes."
+    },
+    "hypothesis": {
+        "value": [[0.0254, 0.0508, 0.1016, 0.1524, 0.2286, 0.3048]],
+        "description": "List with list of hypothesis values, each list should correspond to each variable with missing data."
+    }
+}
